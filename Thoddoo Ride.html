@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thoddoo Ride — E-Bike Rental, Thoddoo Island</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body data-hero="a" style="font-size: 17px">
+
+<!-- ============================ NAV ============================ -->
+<header class="nav" id="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="#home" aria-label="Thoddoo Ride home">
+      <span class="mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l4-8h5"/><path d="M9 9l2.4 5.5H18"/><circle cx="13" cy="6" r="1.2" fill="currentColor" stroke="none"/></svg>
+      </span>
+      <span>Thoddoo Ride<small>Thoddoo · AA Atoll</small></span>
+    </a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#explore" data-i18n="nav.explore">Explore</a>
+      <a href="#availability" data-i18n="nav.availability">Availability</a>
+      <a href="#rates" data-i18n="nav.rates">Rates</a>
+      <a href="#reviews" data-i18n="nav.reviews">Reviews</a>
+      <a href="#book" data-i18n="nav.book">Book</a>
+      <a href="#faq" data-i18n="nav.faq">FAQ</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </nav>
+    <div class="nav-cta">
+      <div class="lang" id="langWrap">
+        <button class="lang-btn" id="langBtn" aria-label="Language">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 2.5 15.3 0 18M12 3c-2.5 2.7-2.5 15.3 0 18"/></svg>
+          <span data-lang-label>EN</span>
+          <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>
+        </button>
+        <div class="lang-menu" id="langMenu">
+          <button data-lang="en"><span class="flag">🇬🇧</span>English<span class="native">EN</span></button>
+          <button data-lang="zh"><span class="flag">🇨🇳</span>中文<span class="native">ZH</span></button>
+          <button data-lang="ru"><span class="flag">🇷🇺</span>Русский<span class="native">RU</span></button>
+        </div>
+      </div>
+      <a class="btn btn-primary" href="#book"><span class="lbl" data-i18n="nav.bookBtn">Book a bike</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      <button class="nav-toggle" id="navToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main>
+<!-- ============================ HERO ============================ -->
+<section id="home" class="hero">
+  <div class="hero-ambient" aria-hidden="true">
+    <div class="amb-sky"></div>
+    <div class="amb-sun"></div>
+    <div class="amb-cloud c1"></div>
+    <div class="amb-cloud c2"></div>
+    <div class="amb-cloud c3"></div>
+    <div class="amb-sea"></div>
+    <div class="amb-glint" style="left:18%;bottom:14%;animation-delay:.4s"></div>
+    <div class="amb-glint" style="left:42%;bottom:8%;animation-delay:2.1s"></div>
+    <div class="amb-glint" style="left:67%;bottom:18%;animation-delay:1.3s"></div>
+    <div class="amb-glint" style="left:83%;bottom:10%;animation-delay:3.2s"></div>
+  </div>
+  <div class="wrap">
+
+    <!-- HERO A — editorial split -->
+    <div class="hero-variant hero-a">
+      <div class="grid">
+        <div>
+          <div class="eyebrow" data-i18n="heroA.eyebrow">Electric bikes · Thoddoo Island</div>
+          <h1 class="display" data-i18n-html="heroA.title">See more of <em>Thoddoo</em>, the easy way.</h1>
+          <p class="lead" data-i18n="heroA.lead">Quiet electric bikes for exploring the island — the beaches, the watermelon farms, the bikya. Pick one up near the harbour, ride all day, drop it back. No license, no fuss.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#book" data-i18n="cta.book">Book a bike</a>
+            <a class="btn btn-ghost" href="#availability" data-i18n="cta.avail">Check availability</a>
+          </div>
+          <div class="hero-meta">
+            <div class="stat"><div class="n serif">4</div><div class="l" data-i18n="heroA.stat1">e-bikes in the fleet</div></div>
+            <div class="stat"><div class="n serif">MVR&nbsp;300</div><div class="l" data-i18n="heroA.stat2">per day, all-in</div></div>
+            <div class="stat"><div class="n serif">60<span style="font-size:18px">km</span></div><div class="l" data-i18n="heroA.stat3">range per charge</div></div>
+          </div>
+        </div>
+        <div class="snap">
+          <div class="snap-head">
+            <h4 data-i18n="heroA.fleetnow">Fleet right now</h4>
+            <span class="live-pill"><span class="live-dot"></span><span data-avail-count>2 of 4 free</span></span>
+          </div>
+          <div class="snap-island">
+            <image-slot id="hero-snap" style="position:absolute;inset:0;width:100%;height:100%" shape="rect" fit="cover" src="uploads/thoddoo.webp" placeholder="Drop a Thoddoo beach photo"></image-slot>
+          </div>
+          <div class="snap-list" data-snap-list></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO B — full-bleed image -->
+    <div class="hero-variant hero-b">
+      <div class="stage">
+        <image-slot id="hero-bleed" shape="rect" fit="cover" src="uploads/thoddoo.webp" placeholder="Drop a wide island / bike photo" style="height: 471px"></image-slot>
+        <div class="scrim"></div>
+        <div class="stage-inner">
+          <span class="live-pill"><span class="live-dot"></span><span data-avail-count>2 of 4 bikes free now</span></span>
+          <h1 class="display" style="margin-top:18px" data-i18n-html="heroB.title">Thoddoo runs on <em>two wheels.</em></h1>
+          <p class="lead" data-i18n="heroB.lead">Skip the heat and the hire-car queue. Glide between the beach, the farms and your guesthouse on a clean, quiet e-bike.</p>
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="#book" data-i18n="cta.book">Book a bike</a>
+            <a class="btn btn-ghost" href="#availability" data-i18n="cta.avail">Check availability</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- HERO C — centered minimal -->
+    <div class="hero-variant hero-c">
+      <div class="inner">
+        <div class="eyebrow" data-i18n="heroC.eyebrow">Electric bike rental · Thoddoo, AA Atoll</div>
+        <h1 class="display" style="margin-top:22px" data-i18n-html="heroC.title">The island, <em>unhurried.</em></h1>
+        <p class="lead" data-i18n="heroC.lead">Four electric bikes, one beautiful island. Rent by the day and explore Thoddoo at your own pace.</p>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#book" data-i18n="cta.book">Book a bike</a>
+          <a class="btn btn-ghost" href="#availability" data-i18n="cta.avail">Check availability</a>
+        </div>
+        <div class="chips" data-chip-list></div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ============================ EXPLORE THODDOO ============================ -->
+<section id="explore" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="explore.eyebrow">Why a bike</span>
+      <h2 class="section-title" data-i18n="explore.title">Where a bike takes you on Thoddoo.</h2>
+      <p class="lead" data-i18n="explore.lead">Thoddoo is bigger than it looks and the sun is strong. On an e-bike you cover it all in a day — beaches, farms and the village — without breaking a sweat.</p>
+    </div>
+    <div class="explore-grid reveal">
+      <div class="exp-card">
+        <image-slot id="exp-beach" shape="rect" fit="cover" placeholder="Bikini beach photo"></image-slot>
+        <div class="exp-scrim"></div>
+        <div class="exp-body">
+          <div class="exp-dist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-7h5"/></svg><span data-i18n="explore.c1dist">5 min ride</span></div>
+          <h4 data-i18n="explore.c1title">Bikini Beach</h4>
+          <p data-i18n="explore.c1desc">The long sandbank on the north shore — the island's swimming and sunset spot.</p>
+        </div>
+      </div>
+      <div class="exp-card">
+        <image-slot id="exp-farm" shape="rect" fit="cover" placeholder="Watermelon farm photo"></image-slot>
+        <div class="exp-scrim"></div>
+        <div class="exp-body">
+          <div class="exp-dist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-7h5"/></svg><span data-i18n="explore.c2dist">8 min ride</span></div>
+          <h4 data-i18n="explore.c2title">The farms</h4>
+          <p data-i18n="explore.c2desc">Thoddoo's famous watermelon and papaya fields — green lanes made for cycling.</p>
+        </div>
+      </div>
+      <div class="exp-card">
+        <image-slot id="exp-village" shape="rect" fit="cover" placeholder="Village street photo"></image-slot>
+        <div class="exp-scrim"></div>
+        <div class="exp-body">
+          <div class="exp-dist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-7h5"/></svg><span data-i18n="explore.c3dist">2 min ride</span></div>
+          <h4 data-i18n="explore.c3title">The village &amp; bikya</h4>
+          <p data-i18n="explore.c3desc">Cafés, local shops and the harbour — grab a short-eat and watch the boats.</p>
+        </div>
+      </div>
+      <div class="exp-card">
+        <image-slot id="exp-reef" shape="rect" fit="cover" placeholder="Reef / sunset photo"></image-slot>
+        <div class="exp-scrim"></div>
+        <div class="exp-body">
+          <div class="exp-dist"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3"/><circle cx="18" cy="17" r="3"/><path d="M6 17l4-7h5"/></svg><span data-i18n="explore.c4dist">10 min ride</span></div>
+          <h4 data-i18n="explore.c4title">The house reef</h4>
+          <p data-i18n="explore.c4desc">Quiet snorkelling spots around the island edge — easy to reach, easy to leave.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<section id="availability" class="section" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="avail-head reveal">
+      <div class="section-head" style="margin-bottom:0">
+        <span class="live-pill"><span class="live-dot"></span><span data-updated>updated just now</span></span>
+        <h2 class="section-title" data-i18n="avail.title">What's free right now.</h2>
+        <p class="lead" data-i18n="avail.lead">Check the fleet before you head down to the shop — no wasted walks. Statuses update through the day as bikes go out and come back.</p>
+      </div>
+      <a class="btn btn-primary" href="#book" data-i18n="avail.btn">Book an available bike</a>
+    </div>
+
+    <div class="avail-grid reveal" data-avail></div>
+
+    <p class="avail-note reveal" style="margin-top:26px">
+      Want a specific bike held for a date?
+      <a href="#book" style="color:var(--ocean);font-weight:600;text-decoration:underline;text-underline-offset:2px">Reserve it here</a>
+      and we'll confirm by WhatsApp.
+    </p>
+  </div>
+</section>
+
+<!-- ============================ RATES ============================ -->
+<section id="rates" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="rates.eyebrow">Rates</span>
+      <h2 class="section-title"><span data-i18n="rates.title">One simple price. The whole day.</span><span class="cur-toggle" id="curToggle"><button data-cur="MVR" class="on">MVR</button><button data-cur="USD">USD</button></span></h2>
+    </div>
+    <div class="rates-grid reveal">
+      <div class="rate-card" style="opacity: 1; padding: 34px; border-radius: 26px">
+        <div class="eyebrow" data-i18n="rates.daily">Daily rental</div>
+        <div class="rate-amt"><span class="cur" data-cur-sym>MVR</span><span class="num" data-cur-amt>300</span><span class="per" data-i18n="rates.perday">/ day</span></div>
+        <div class="rate-usd" data-cur-alt>≈ USD 19 / day</div>
+        <p class="rate-note" data-i18n="rates.note">Per bike, per calendar day. Helmet, lock and a full charge included — pick up any time, return by the same time next day.</p>
+      </div>
+      <div>
+        <ul class="rate-incl">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Helmet &amp; lock</strong> included with every bike.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Fully charged</strong> — roughly 60&nbsp;km of range, plenty for a day on Thoddoo.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Free pickup &amp; drop</strong> near the harbour, or we'll bring it to your guesthouse.</span></li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>On-call support</strong> if anything goes flat — message us and we'll sort it.</span></li>
+        </ul>
+        <div class="rate-seasonal">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>
+          <span data-i18n="rates.seasonal">Rates can shift a little with the season and for multi-day rentals. Booking more than a day? Message us for the best price.</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ REVIEWS ============================ -->
+<section id="reviews" class="section" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="rev-head reveal">
+      <div class="section-head" style="margin-bottom:0">
+        <span class="eyebrow" data-i18n="reviews.eyebrow">Riders &amp; reviews</span>
+        <h2 class="section-title" data-i18n="reviews.title">Loved by guests on Thoddoo.</h2>
+        <p class="lead" data-i18n="reviews.lead">A few words from people who explored the island with us. Read more — and see daily rides — on our social pages.</p>
+      </div>
+      <div class="rev-rating">
+        <div class="rev-stars">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg>
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg>
+        </div>
+        <div class="rv-num"><b>4.9</b> / 5 · <span data-i18n="reviews.count">38 reviews</span></div>
+      </div>
+    </div>
+
+    <div class="rev-grid reveal">
+      <div class="rev-card">
+        <div class="rc-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg></div>
+        <p class="rc-text" data-i18n="reviews.r1">“Best way to see Thoddoo. We rode to the beach every morning and the farms in the afternoon — so easy, and the bikes were spotless.”</p>
+        <div class="rc-who"><span class="rc-av">EM</span><div><div class="rc-name">Emma &amp; Jack</div><div class="rc-meta" data-i18n="reviews.r1meta">United Kingdom · March</div></div><span class="rc-src" title="Google review"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v3.8h5.35c-.25 1.5-1.8 4.4-5.35 4.4-3.2 0-5.8-2.65-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .77 3.7 1.43l2.5-2.4C16.9 3.8 14.7 2.9 12 2.9 6.95 2.9 2.9 6.95 2.9 12s4.05 9.1 9.1 9.1c5.25 0 8.7-3.7 8.7-8.9 0-.6-.06-1.05-.15-1.5z"/></svg></span></div>
+      </div>
+      <div class="rev-card">
+        <div class="rc-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg></div>
+        <p class="rc-text" data-i18n="reviews.r2">“They delivered the bike to our guesthouse and picked it up after. Super friendly, quick replies on WhatsApp. Highly recommend.”</p>
+        <div class="rc-who"><span class="rc-av">AN</span><div><div class="rc-name">Anna K.</div><div class="rc-meta" data-i18n="reviews.r2meta">Germany · February</div></div><span class="rc-src" title="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></span></div>
+      </div>
+      <div class="rev-card">
+        <div class="rc-stars"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l2.9 6.3 6.8.7-5.1 4.6 1.5 6.7L12 17.8 5.9 20.6l1.5-6.7L2.3 9.3l6.8-.7z"/></svg></div>
+        <p class="rc-text" data-i18n="reviews.r3">“The e-bikes made the heat a non-issue. Battery lasted the whole day and getting around was effortless. Will rent again next trip.”</p>
+        <div class="rc-who"><span class="rc-av">DM</span><div><div class="rc-name">Dmitry &amp; Olga</div><div class="rc-meta" data-i18n="reviews.r3meta">Russia · January</div></div><span class="rc-src" title="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.6a4.3 4.3 0 0 1-1-2.6h-3v12.2a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7 0 5.4 5.4 0 1 0 5.4 5.4V9.3a7.2 7.2 0 0 0 4 1.2V7.5a4.3 4.3 0 0 1-3-1.9z"/></svg></span></div>
+      </div>
+    </div>
+
+    <div class="rev-social reveal">
+      <a href="https://instagram.com" target="_blank" rel="noopener"><span class="ig"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></span><span>@thoddooride<small data-i18n="reviews.igsub">Daily rides &amp; island views</small></span></a>
+      <a href="https://tiktok.com" target="_blank" rel="noopener"><span class="tt"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 5.6a4.3 4.3 0 0 1-1-2.6h-3v12.2a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.8a5.6 5.6 0 0 0-.7 0 5.4 5.4 0 1 0 5.4 5.4V9.3a7.2 7.2 0 0 0 4 1.2V7.5a4.3 4.3 0 0 1-3-1.9z"/></svg></span><span>@thoddooride<small data-i18n="reviews.ttsub">Ride clips on TikTok</small></span></a>
+      <a href="https://google.com" target="_blank" rel="noopener"><span class="gg"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.35 11.1H12v3.8h5.35c-.25 1.5-1.8 4.4-5.35 4.4-3.2 0-5.8-2.65-5.8-5.9s2.6-5.9 5.8-5.9c1.8 0 3 .77 3.7 1.43l2.5-2.4C16.9 3.8 14.7 2.9 12 2.9 6.95 2.9 2.9 6.95 2.9 12s4.05 9.1 9.1 9.1c5.25 0 8.7-3.7 8.7-8.9 0-.6-.06-1.05-.15-1.5z"/></svg></span><span data-i18n-html="reviews.gg">Google reviews<small data-i18n="reviews.ggsub">Read all 38 reviews</small></span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ BOOK ============================ -->
+<section id="book" class="section" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="book.eyebrow">Booking</span>
+      <h2 class="section-title" data-i18n="book.title">Three ways to grab a bike.</h2>
+      <p class="lead" data-i18n="book.lead">Whatever's easiest for you. Message us, fill in the form, or just call — we'll confirm availability and hold a bike.</p>
+    </div>
+    <div class="book-grid">
+      <div class="methods reveal">
+        <a class="method" href="https://wa.me/9607770000?text=Hi%20Thoddoo%20Ride!%20I'd%20like%20to%20book%20an%20e-bike." target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.13c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.23-8.25 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg></span>
+          <div>
+            <div class="step">Method 01 · fastest</div>
+            <h4>WhatsApp us</h4>
+            <p>Send a quick message with your dates. We usually reply within minutes during the day.</p>
+          </div>
+        </a>
+        <a class="method" href="#book-form">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M9 13h6M9 17h4"/></svg></span>
+          <div>
+            <div class="step">Method 02 · on this page</div>
+            <h4>Booking form</h4>
+            <p>Tell us the bike, the dates and how you'd like to pay. We confirm by WhatsApp or a call.</p>
+          </div>
+        </a>
+        <a class="method" href="tel:+9607770000">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+          <div>
+            <div class="step">Method 03 · prefer to talk</div>
+            <h4>Call us</h4>
+            <p>Give us a ring and we'll sort it out on the spot. Good for same-day or last-minute rides.</p>
+          </div>
+        </a>
+      </div>
+
+      <form class="bookform reveal" id="book-form" novalidate>
+        <h3 data-i18n="form.title">Reserve a bike</h3>
+        <p class="sub" data-i18n="form.sub">We'll hold it and confirm — no payment needed online.</p>
+        <div class="field">
+          <label for="f-bike" data-i18n="form.bike">Which bike</label>
+          <select id="f-bike" name="bike"><option data-i18n="form.anybike">Any available bike</option></select>
+        </div>
+        <div class="timerow">
+          <div class="field"><label for="f-from" data-i18n="form.pickdate">Pick-up date</label><input id="f-from" name="from" type="date" /></div>
+          <div class="field"><label for="f-time" data-i18n="form.picktime">Pick-up time</label>
+            <select id="f-time" name="time"><option>09:00</option><option>10:00</option><option selected>11:00</option><option>12:00</option><option>13:00</option><option>14:00</option><option>15:00</option><option>16:00</option></select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="f-days" data-i18n="form.days">How many days</label>
+            <select id="f-days" name="days"><option value="1" data-i18n="form.d1">1 day</option><option value="2" data-i18n="form.d2">2 days</option><option value="3" data-i18n="form.d3">3 days</option><option value="5" data-i18n="form.d46">4–6 days</option><option value="7" data-i18n="form.dweek">A week or more</option></select>
+          </div>
+          <div class="field"><label for="f-bikes" data-i18n="form.howmany">How many bikes</label>
+            <select id="f-bikes" name="bikes"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option></select>
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field"><label for="f-name" data-i18n="form.name">Your name</label><input id="f-name" name="name" type="text" placeholder="Name" /></div>
+          <div class="field"><label for="f-contact" data-i18n="form.contact">WhatsApp / phone</label><input id="f-contact" name="contact" type="tel" placeholder="+960 …" /></div>
+        </div>
+        <div class="field">
+          <label data-i18n="form.pay">How you'd like to pay</label>
+          <div class="pay-pick">
+            <label><input type="radio" name="pay" value="Cash" checked /><span class="pay-opt" data-i18n="form.cash">Cash</span></label>
+            <label><input type="radio" name="pay" value="Bank transfer" /><span class="pay-opt" data-i18n="form.transfer">Transfer</span></label>
+            <label><input type="radio" name="pay" value="Card" /><span class="pay-opt" data-i18n="form.card">Card</span></label>
+          </div>
+        </div>
+        <div class="upload-block">
+          <label style="display:block;font-size:13px;font-weight:600;color:var(--ink-soft);margin-bottom:8px;letter-spacing:.01em">Documents <span style="font-weight:400;color:var(--ink-faint)">— for ID &amp; the refundable deposit</span></label>
+          <div class="upload-grid">
+            <label class="upload">
+              <input type="file" accept="image/*,.pdf" id="f-passport" required />
+              <span class="upload-face">
+                <span class="uic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="11" r="2.2"/><path d="M5.5 17c.6-1.8 2-2.6 3.5-2.6s2.9.8 3.5 2.6M15 9h4M15 13h4"/></svg></span>
+                <span><span class="ut">Passport copy <span class="req-star">*</span></span><span class="us" data-empty="Photo or PDF">Photo or PDF</span></span>
+              </span>
+            </label>
+            <label class="upload">
+              <input type="file" accept="image/*,.pdf" id="f-licence" />
+              <span class="upload-face">
+                <span class="uic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><rect x="5" y="9" width="5" height="5" rx="1"/><path d="M13 9h5M13 13h5M5 17h8"/></svg></span>
+                <span><span class="ut">Driving licence <span style="font-weight:400;color:var(--ink-faint)">(optional)</span></span><span class="us" data-empty="If you have one">If you have one</span></span>
+              </span>
+            </label>
+          </div>
+          <div class="privacy-note">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg>
+            <span>Your documents are used only to verify your booking and deposit, and are deleted after your rental. See our <a href="#" data-open-privacy>Privacy Policy</a>.</span>
+          </div>
+          <p class="upload-err" data-upload-err><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg><span data-i18n="form.passporterr">A passport copy is required to request a booking. The driving licence is optional.</span></p>
+        </div>
+        <div class="book-total">
+          <div class="bt-label" data-i18n-html="form.estimate">Estimated total<small data-i18n="form.estimatesub">Confirmed on WhatsApp · deposit separate</small></div>
+          <div class="bt-amt"><span data-total-main>MVR 300</span><small data-total-alt>≈ USD 19</small></div>
+        </div>
+        <label class="agree" id="agreeRow">
+          <input type="checkbox" id="f-agree" />
+          <span data-i18n-html="form.agree">I've read and agree to the <a href="#" data-open-terms>Rental Agreement &amp; Liability Waiver</a> and the <a href="#" data-open-privacy>Privacy Policy</a>.</span>
+        </label>
+        <div class="cancel-note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg>
+          <span data-i18n="form.cancel">Free cancellation up to 24 hours before pick-up.</span>
+        </div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary" data-i18n="form.submit">Request booking</button>
+          <button type="button" class="btn btn-wa" id="waSend"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Z"/></svg><span data-i18n="form.wasend">Send on WhatsApp</span></button>
+        </div>
+        <div class="form-ok" id="formOk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span data-i18n="form.ok">Thanks! We've noted your request — we'll confirm by WhatsApp shortly.</span></div>
+        <p class="form-note" data-i18n="form.note">This is a request, not a charge. We confirm every booking personally.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ PAYMENTS ============================ -->
+<section id="pay" class="section">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow" data-i18n="pay.eyebrow">Payments</span>
+      <h2 class="section-title" data-i18n="pay.title">Pay however suits you.</h2>
+      <p class="lead" data-i18n="pay.lead">Settle up on pickup or on return — whatever's easiest. We'll always send a clear total before you ride.</p>
+    </div>
+    <div class="pay-grid reveal">
+      <div class="pay-tile">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="20" height="12" rx="2"/><circle cx="12" cy="12" r="2.5"/><path d="M6 12h.01M18 12h.01"/></svg></span>
+        <h4 data-i18n="pay.cash">Cash</h4>
+        <p data-i18n="pay.cashdesc">Pay in MVR or USD when you pick the bike up. Simple and quick — no app needed.</p>
+        <div class="detail" data-i18n="pay.cashtag">MVR &amp; USD accepted</div>
+      </div>
+      <div class="pay-tile">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span>
+        <h4 data-i18n="pay.transfer">Bank transfer</h4>
+        <p data-i18n="pay.transferdesc">Local BML transfer works great. We'll share account details when you book.</p>
+        <div class="detail" data-i18n="pay.transfertag">BML · details on booking</div>
+      </div>
+      <div class="pay-tile">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="5" width="20" height="14" rx="2"/><path d="M2 10h20"/></svg></span>
+        <h4 data-i18n="pay.card">Card</h4>
+        <p data-i18n="pay.carddesc">Visa &amp; Mastercard accepted at the shop. A small processing fee may apply.</p>
+        <div class="detail" data-i18n="pay.cardtag">Visa · Mastercard</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ GUESTHOUSE / DELIVERY ============================ -->
+<section id="guesthouse" class="section">
+  <div class="wrap">
+    <div class="gh reveal">
+      <div class="gh-grid">
+        <div>
+          <span class="eyebrow" data-i18n="gh.eyebrow">For guests &amp; guesthouses</span>
+          <h2 data-i18n="gh.title">We bring the bike to your door.</h2>
+          <p class="lead" data-i18n="gh.lead">Staying at a guesthouse on Thoddoo? We'll deliver your e-bike to reception and collect it when you're done — no extra charge.</p>
+          <ul class="gh-points">
+            <li><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18M5 21V8l7-5 7 5v13M9 21v-6h6v6"/></svg></span><span data-i18n-html="gh.p1"><b>Free delivery &amp; pickup</b><small>To any guesthouse or hotel on the island.</small></span></li>
+            <li><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span><span data-i18n-html="gh.p2"><b>Book on behalf of guests</b><small>Guesthouse owners — reserve bikes for your visitors in one message.</small></span></li>
+            <li><span class="pic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 7.4H22l-6 4.5 2.3 7.1L12 16.6 5.7 21l2.3-7.1-6-4.5h7.6z"/></svg></span><span data-i18n-html="gh.p3"><b>Partner rates</b><small>Special pricing for guesthouses that refer guests regularly.</small></span></li>
+          </ul>
+        </div>
+        <div class="gh-card">
+          <h4 data-i18n="gh.cardtitle">Run a guesthouse on Thoddoo?</h4>
+          <p data-i18n="gh.carddesc">Let's set up a partner arrangement so your guests get bikes delivered and you earn a referral rate.</p>
+          <div class="gh-actions">
+            <a class="btn btn-light" href="https://wa.me/9607770000?text=Hi%20Thoddoo%20Ride!%20I%20run%20a%20guesthouse%20and%20would%20like%20to%20partner." target="_blank" rel="noopener" data-i18n="gh.partnerbtn">Become a partner</a>
+            <a class="btn btn-outline" href="#book" data-i18n="gh.guestbtn">Book for a guest</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ FAQ ============================ -->
+<section id="faq" class="section" style="background:var(--paper-2)">
+  <div class="wrap">
+    <div class="faq-grid">
+      <div class="section-head reveal" style="margin-bottom:0">
+        <span class="eyebrow" data-i18n="faq.eyebrow">Good to know</span>
+        <h2 class="section-title" data-i18n="faq.title">Questions, answered.</h2>
+        <p class="lead" data-i18n="faq.lead">Anything else? Message us on WhatsApp — we're happy to help before you book.</p>
+      </div>
+      <div class="faq-list reveal">
+        <div class="faq-item">
+          <button class="faq-q"><span class="qmark">01</span><span data-i18n="faq.q1">Do I need a licence to ride?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a1">No licence needed. Our e-bikes are pedal-assist, so anyone comfortable on a normal bicycle can ride one. We'll give you a quick run-through of the controls before you set off.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qmark">02</span><span data-i18n="faq.q2">How far will one charge take me?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a2">Around 60&nbsp;km of pedal-assist range on a full charge. Thoddoo is small, so a full day of riding around the island uses only part of the battery — you won't run out exploring.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qmark">03</span><span data-i18n="faq.q3">Where do I pick up and drop off?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a3">From our shop near the harbour — easy to reach when your ferry or speedboat arrives. Staying at a guesthouse? Just ask and we'll bring the bike to you and collect it after, at no extra cost.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qmark">04</span><span data-i18n="faq.q4">Is there a deposit?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a4">A small refundable deposit (or a photo of your ID) is all we ask, returned in full when the bike comes back in good shape. We'll explain it clearly when you collect.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qmark">05</span><span data-i18n="faq.q5">What if the bike has a problem mid-ride?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a5">Message or call us — the whole island is a few minutes away. We'll come to you with a fix or a swap bike so your day isn't interrupted.</div></div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-q"><span class="qmark">06</span><span data-i18n="faq.q6">Can I book for more than one day?</span><span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg></span></button>
+          <div class="faq-a"><div class="faq-a-inner" data-i18n="faq.a6">Absolutely. Multi-day and weekly rentals are welcome and usually come with a better daily rate — just tell us your dates when you book and we'll quote you.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================ CONTACT ============================ -->
+<section id="contact" class="section">
+  <div class="wrap">
+    <div class="contact reveal">
+      <div class="contact-grid">
+        <div>
+          <span class="eyebrow" data-i18n="contact.eyebrow">Get in touch</span>
+          <h2 data-i18n="contact.title">Ready when you are.</h2>
+          <p data-i18n="contact.lead">Drop us a message any time — we'll confirm availability, answer questions, and have a bike charged and waiting.</p>
+        </div>
+        <div class="contact-actions">
+          <a class="c-link" href="https://wa.me/9607770000" target="_blank" rel="noopener">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.13c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.23-8.25 8.23Z"/></svg></span>
+            <div><div class="t">WhatsApp</div><div class="v">+960 777 0000</div></div>
+            <span class="arr"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="c-link" href="https://instagram.com" target="_blank" rel="noopener">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></span>
+            <div><div class="t">Instagram</div><div class="v">@thoddooride</div></div>
+            <span class="arr"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+          <a class="c-link" href="tel:+9607770000">
+            <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92Z"/></svg></span>
+            <div><div class="t">Call / SMS</div><div class="v">+960 777 0000</div></div>
+            <span class="arr"><svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============================ FOOTER ============================ -->
+<footer class="foot">
+  <div class="wrap foot-inner">
+    <a class="brand" href="#home">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l4-8h5"/><path d="M9 9l2.4 5.5H18"/></svg></span>
+      <span>Thoddoo Ride</span>
+    </a>
+    <span class="foot-note">© 2026 · Thoddoo · Alif Alif Atoll · Maldives</span>
+    <a href="#" data-open-privacy class="foot-staff" style="color:var(--ink-soft)" data-i18n="footer.privacy">Privacy policy</a>
+    <a href="#" data-open-terms class="foot-staff" style="color:var(--ink-soft)" data-i18n="footer.terms">Rental terms</a>
+    <div class="foot-soc">
+      <a href="https://wa.me/9607770000" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Z"/></svg></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2.5" y="2.5" width="19" height="19" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.6" cy="6.4" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-2.2 0-4 1.8-4 4v2H7v3h3v7h3v-7h3l1-3h-4v-2c0-.6.4-1 1-1Z"/></svg></a>
+    </div>
+  </div>
+</footer>
+
+<!-- ============================ PRIVACY MODAL ============================ -->
+<div class="modal" id="privacyModal" role="dialog" aria-modal="true" aria-label="Privacy policy">
+  <div class="modal-scrim" data-close-privacy></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close-privacy aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <span class="modal-tag">Template · review before publishing</span>
+    <h3>Privacy Policy</h3>
+    <p>Thoddoo Ride collects only what we need to rent you a bike safely and to keep our small fleet secure. This is a plain-language summary — please review and adjust it before going live.</p>
+
+    <h4>What we collect</h4>
+    <ul>
+      <li>Your name and contact number (WhatsApp or phone)</li>
+      <li>Your booking details — bike, dates and payment method</li>
+      <li>A copy of your passport, and your driving licence if you provide one</li>
+    </ul>
+
+    <h4>How we use it</h4>
+    <p>To confirm and manage your booking, verify your identity for the refundable deposit, and contact you about your rental. We do not sell your information or share it for marketing.</p>
+
+    <h4>How long we keep it</h4>
+    <p>Document copies are kept only for the duration of your rental and the deposit period, then deleted. Basic booking records may be retained for our accounts.</p>
+
+    <h4>Your choices</h4>
+    <p>You can ask us what we hold, or request deletion, at any time — just message us. Providing a passport copy is required to rent; the driving licence is optional.</p>
+
+    <p style="margin-top:18px;color:var(--ink-faint)">Questions about your data? Message us on WhatsApp at <strong style="color:var(--ink)">+960&nbsp;777&nbsp;0000</strong>.</p>
+  </div>
+</div>
+
+<!-- ============================ RENTAL AGREEMENT MODAL ============================ -->
+<div class="modal" id="termsModal" role="dialog" aria-modal="true" aria-label="Rental agreement">
+  <div class="modal-scrim" data-close-terms></div>
+  <div class="modal-card">
+    <button class="modal-close" data-close-terms aria-label="Close"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    <span class="modal-tag">Template · review with a local advisor before publishing</span>
+    <h3>Rental Agreement &amp; Liability Waiver</h3>
+    <p>This is a plain-language summary of the terms you accept when you rent an e-bike from Thoddoo Ride. The full signed version is provided at pickup. Please review and adapt it with a local legal advisor before going live.</p>
+
+    <h4>1 · Who can ride</h4>
+    <p>The rider is 16 years or older, in good health, and comfortable riding a bicycle. You agree to ride only within Thoddoo and to follow local rules and customs.</p>
+
+    <h4>2 · The bike</h4>
+    <p>We provide the e-bike in good working order with a helmet and lock. You'll check its condition with us at pickup and tell us about any existing damage before you ride.</p>
+
+    <h4>3 · Safe use</h4>
+    <p>You agree to wear the helmet, ride at safe speeds, not carry more people than the bike is built for, and never ride under the influence of alcohol or drugs.</p>
+
+    <h4>4 · Care &amp; return</h4>
+    <p>Return the bike on time and in the same condition. Lock it whenever it's unattended. Late returns may be charged at the daily rate.</p>
+
+    <h4>5 · Damage, loss &amp; theft</h4>
+    <p>You're responsible for damage, loss or theft during your rental. The refundable deposit may be applied toward repairs. Report any theft to us and the police immediately.</p>
+
+    <h4>6 · Deposit</h4>
+    <p>A refundable deposit is taken at pickup and returned in full when the bike comes back undamaged.</p>
+
+    <h4>7 · Liability</h4>
+    <p>You ride at your own risk. To the extent allowed by law, Thoddoo Ride is not liable for injury, loss or damage arising from your use of the bike, except where caused by our negligence or faulty equipment.</p>
+
+    <h4>8 · Cancellation</h4>
+    <p>Free cancellation up to 24 hours before pickup. Within 24 hours, contact us and we'll do our best to help.</p>
+
+    <p style="margin-top:18px;color:var(--ink-faint)">Questions about these terms? Message us on WhatsApp at <strong style="color:var(--ink)">+960&nbsp;777&nbsp;0000</strong>. Translations available on request.</p>
+  </div>
+</div>
+
+<!-- floating whatsapp -->
+<a class="wa-float" href="https://wa.me/9607770000" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38c1.45.79 3.08 1.21 4.79 1.21 5.46 0 9.91-4.45 9.91-9.91C21.95 6.45 17.5 2 12.04 2Zm0 18.13c-1.52 0-3.01-.41-4.3-1.18l-.31-.18-3.12.82.83-3.04-.2-.31a8.2 8.2 0 0 1-1.26-4.36c0-4.54 3.7-8.23 8.25-8.23 4.54 0 8.24 3.69 8.24 8.23 0 4.54-3.7 8.23-8.25 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.25-.64.81-.79.97-.14.17-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.51.11-.11.25-.29.37-.43.13-.14.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.41-.42-.56-.43h-.48c-.17 0-.43.06-.66.31-.22.25-.86.85-.86 2.07 0 1.22.89 2.4 1.01 2.56.12.17 1.75 2.67 4.24 3.74.59.26 1.05.41 1.41.52.59.19 1.13.16 1.56.1.48-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.1-.22-.16-.47-.28Z"/></svg>
+</a>
+
+<script src="image-slot.js"></script>
+<script src="i18n.js"></script>
+<script src="site.js"></script>
+
+<!-- Tweaks panel (React) -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="tweaks-app.jsx"></script>
+
+</body>
+</html>

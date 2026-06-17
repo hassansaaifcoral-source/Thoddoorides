@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Thoddoo Ride — Operations</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,300;0,6..72,400;0,6..72,500;1,6..72,400&family=Hanken+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body class="adm-body">
+
+<!-- ============================ SIGN-IN GATE ============================ -->
+<div class="lock" id="lock">
+  <form class="lock-card" id="lockForm" autocomplete="off">
+    <span class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="10" width="16" height="10" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span>
+    <h2>Staff sign-in</h2>
+    <p>Thoddoo Ride operations. Authorised staff only.</p>
+    <input id="lockUser" type="text" placeholder="Username" autocomplete="username" autocapitalize="none" spellcheck="false" />
+    <input id="lockInput" type="password" placeholder="Password" autocomplete="current-password" />
+    <div class="lock-error" id="lockError"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8v4M12 16h.01"/></svg>Incorrect username or password.</div>
+    <button class="btn btn-primary" id="lockBtn" type="submit">Sign in</button>
+    <div class="lock-hint">Forgot your details? Contact the owner.</div>
+  </form>
+</div>
+
+<!-- ============================ TOP BAR ============================ -->
+<header class="adm-bar">
+  <div class="adm-bar-in">
+    <a class="brand" href="#">
+      <span class="mark" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="17" r="3.4"/><circle cx="18" cy="17" r="3.4"/><path d="M6 17l4-8h5"/><path d="M9 9l2.4 5.5H18"/></svg></span>
+      <span>Thoddoo Ride<small>Operations</small></span>
+    </a>
+    <span class="adm-tag">Live fleet</span>
+    <div class="adm-bar-right">
+      <span class="adm-sync"><span class="live-dot"></span><span data-sync>synced · just now</span></span>
+      <a class="adm-link" href="Thoddoo Ride.html">↗ View public site</a>
+      <button class="adm-signout" id="signOut"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>Sign out</button>
+    </div>
+  </div>
+</header>
+
+<!-- ============================ DASHBOARD ============================ -->
+<main class="adm-main">
+  <div class="adm-h">
+    <div>
+      <h1>Fleet, live.</h1>
+      <p>Real-time position and battery for every bike, plus incoming booking requests.</p>
+    </div>
+  </div>
+
+  <div class="adm-tabs" role="tablist">
+    <button class="adm-tab is-on" data-tab="overview">Live fleet</button>
+    <button class="adm-tab" data-tab="sales">Sales &amp; refunds</button>
+  </div>
+
+  <div class="adm-view" data-view="overview">
+  <!-- stats -->
+  <div class="stat-row">
+    <div class="stat-card"><div class="sv" data-stat="available">2</div><div class="sl"><i style="background:var(--ok)"></i>Available</div></div>
+    <div class="stat-card"><div class="sv" data-stat="active">1</div><div class="sl"><i style="background:var(--active)"></i>In use</div></div>
+    <div class="stat-card"><div class="sv" data-stat="booked">1</div><div class="sl"><i style="background:var(--booked)"></i>Booked</div></div>
+    <div class="stat-card"><div class="sv" data-stat="requests">4</div><div class="sl"><i style="background:var(--ink-faint)"></i>New requests</div></div>
+  </div>
+
+  <div class="adm-grid">
+    <!-- MAP -->
+    <div class="adm-panel adm-map" id="map">
+      <div class="adm-panel-h" style="padding-bottom:18px">
+        <h3>Live map · Thoddoo</h3>
+        <span class="live-pill"><span class="live-dot"></span>GPS</span>
+      </div>
+      <div class="map-card">
+        <svg viewBox="0 0 800 620" preserveAspectRatio="xMidYMid slice" role="img" aria-label="Live map of Thoddoo showing bike GPS positions">
+          <defs>
+            <radialGradient id="sea" cx="50%" cy="40%" r="75%">
+              <stop offset="0%" stop-color="#d4ecf7"/><stop offset="60%" stop-color="#bfe2f1"/><stop offset="100%" stop-color="#a9d6ea"/>
+            </radialGradient>
+            <linearGradient id="land" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#f4f0e3"/><stop offset="100%" stop-color="#e9e2cd"/>
+            </linearGradient>
+          </defs>
+          <rect width="800" height="620" fill="url(#sea)"/>
+          <path d="M150 330 Q120 150 360 110 Q620 80 690 250 Q740 420 540 510 Q300 580 190 460 Q150 410 150 330 Z" fill="none" stroke="#8fcadf" stroke-width="2" stroke-dasharray="3 9" opacity=".7"/>
+          <path d="M180 330 Q160 180 380 150 Q600 130 650 280 Q690 420 520 480 Q310 540 215 440 Q180 400 180 330 Z" fill="#bfe6dd" opacity=".55"/>
+          <path id="island" d="M205 332 Q193 200 392 178 Q582 162 624 296 Q654 414 506 462 Q318 510 232 426 Q204 392 205 332 Z" fill="url(#land)" stroke="#d9cfae" stroke-width="2"/>
+          <path d="M205 332 Q193 200 392 178 Q582 162 624 296 Q654 414 506 462 Q318 510 232 426 Q204 392 205 332 Z" fill="none" stroke="#f1ead4" stroke-width="9" opacity=".6"/>
+          <ellipse cx="430" cy="300" rx="95" ry="62" fill="#cfd9a8" opacity=".55"/>
+          <ellipse cx="320" cy="370" rx="55" ry="40" fill="#cfd9a8" opacity=".5"/>
+          <ellipse cx="540" cy="350" rx="48" ry="36" fill="#cfd9a8" opacity=".5"/>
+          <g fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity=".9">
+            <path id="road-main" d="M250 410 Q330 350 410 350 Q510 350 560 270 Q590 222 600 300"/>
+            <path id="road-beach" d="M260 360 Q300 250 400 215 Q520 195 590 250"/>
+            <path id="road-cross" d="M410 350 Q420 280 400 215"/>
+          </g>
+          <g fill="none" stroke="#e7dcc0" stroke-width="7" stroke-linecap="round" stroke-dasharray="1 12" opacity=".9">
+            <path d="M250 410 Q330 350 410 350 Q510 350 560 270 Q590 222 600 300"/>
+            <path d="M260 360 Q300 250 400 215 Q520 195 590 250"/>
+          </g>
+          <g font-family="IBM Plex Mono, monospace" font-size="12" fill="#2c5366">
+            <g><circle cx="248" cy="412" r="5.5" fill="#1b4965"/><rect x="200" y="426" width="96" height="20" rx="6" fill="#ffffff" opacity=".82"/><text x="248" y="440" text-anchor="middle">⚓ Harbour</text></g>
+            <g><circle cx="600" cy="300" r="5.5" fill="#1b4965"/><rect x="556" y="314" width="92" height="20" rx="6" fill="#ffffff" opacity=".82"/><text x="602" y="328" text-anchor="middle">Bikini Beach</text></g>
+            <g><circle cx="430" cy="300" r="5.5" fill="#1b4965"/><rect x="384" y="276" width="92" height="20" rx="6" fill="#ffffff" opacity=".82"/><text x="430" y="290" text-anchor="middle">Farms</text></g>
+            <g><circle cx="360" cy="232" r="5.5" fill="#1b4965"/><rect x="312" y="206" width="96" height="20" rx="6" fill="#ffffff" opacity=".82"/><text x="360" y="220" text-anchor="middle">Guesthouses</text></g>
+            <g><circle cx="293" cy="378" r="6.5" fill="#c08433"/><rect x="248" y="392" width="92" height="20" rx="6" fill="#ffffff" opacity=".9"/><text x="294" y="406" text-anchor="middle">🚲 Our shop</text></g>
+          </g>
+          <g id="bikes"></g>
+        </svg>
+        <div class="map-legend">
+          <span><i style="background:var(--ok)"></i>Available</span>
+          <span><i style="background:var(--active)"></i>In use</span>
+          <span><i style="background:var(--booked)"></i>Booked</span>
+        </div>
+        <div class="map-sync" data-sync>synced · just now</div>
+      </div>
+    </div>
+
+    <!-- FLEET TELEMETRY -->
+    <div class="adm-panel">
+      <div class="adm-panel-h"><h3>Fleet status</h3><span class="live-pill"><span class="live-dot"></span>live</span></div>
+      <div class="adm-panel-b">
+        <div class="board adm-board" data-board></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOOKING REQUESTS -->
+  <div class="adm-panel" style="margin-top:20px">
+    <div class="adm-panel-h">
+      <h3>Booking requests</h3>
+      <span style="margin-left:auto;font-size:12.5px;color:var(--ink-faint);font-family:var(--mono)">submissions from the booking form land here</span>
+    </div>
+    <div class="req-list" data-requests></div>
+  </div>
+  </div><!-- /overview -->
+
+  <!-- ============================ SALES & REFUNDS ============================ -->
+  <div class="adm-view" data-view="sales" hidden>
+    <div class="adm-h" style="margin-bottom:20px">
+      <div>
+        <h1>Sales &amp; refunds.</h1>
+        <p>Revenue, recent transactions, and one-tap refunds.</p>
+      </div>
+      <div class="period">
+        <button class="period-btn is-on">This week</button>
+        <button class="period-btn">This month</button>
+      </div>
+    </div>
+
+    <div class="stat-row stat-row-3">
+      <div class="stat-card"><div class="sv"><span class="cur">MVR</span> <span data-sales="net">—</span></div><div class="sl"><i style="background:var(--ok)"></i>Net revenue · this week</div></div>
+      <div class="stat-card"><div class="sv" data-sales="rentals">—</div><div class="sl"><i style="background:var(--active)"></i>Paid rentals</div></div>
+      <div class="stat-card"><div class="sv" data-sales="refunds">—</div><div class="sl"><i style="background:var(--booked)"></i>Refunds · <span data-sales="refundAmt">—</span></div></div>
+    </div>
+
+    <div class="adm-panel">
+      <div class="adm-panel-h"><h3>Revenue · last 7 days</h3><span style="margin-left:auto;font-family:var(--mono);font-size:12.5px;color:var(--ink-faint)" data-sales="weektotal">—</span></div>
+      <div class="adm-panel-b"><div class="chart" data-chart></div></div>
+    </div>
+
+    <div class="adm-panel" style="margin-top:20px">
+      <div class="adm-panel-h"><h3>Transactions</h3><span style="margin-left:auto;font-size:12.5px;color:var(--ink-faint);font-family:var(--mono)">tap Refund to reverse a payment</span></div>
+      <div class="txn-head"><span>Customer</span><span>Bike</span><span>Date</span><span>Method</span><span style="text-align:right">Amount</span><span style="text-align:right">Status</span></div>
+      <div class="txn-list" data-txns></div>
+    </div>
+  </div>
+</main>
+
+<script src="admin.js"></script>
+</body>
+</html>
