@@ -1,0 +1,17 @@
+# dependencies
+node_modules/
+
+# runtime data (database + uploaded customer documents) — never commit
+data/
+*.db
+*.db-shm
+*.db-wal
+
+# secrets / local env
+.env
+.env.local
+
+# logs / os
+*.log
+npm-debug.log*
+.DS_Store
